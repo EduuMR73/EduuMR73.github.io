@@ -37,7 +37,16 @@
        NAVEGACIÓN
        ============================================================ -->
   <header>
-    <nav aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal">
+      <div class="container nav__container">
+        <a href="#hero" class="nav__logo">EM</a>
+        <div class="nav__links">
+          <a href="#proyectos" class="nav__link">Proyectos</a>
+          <a href="#trayectoria" class="nav__link">Trayectoria</a>
+          <a href="#stack" class="nav__link">Stack</a>
+          <a href="#contacto" class="btn btn--primary">Contacto</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -48,7 +57,46 @@
 
     <!-- SECCIÓN: Hero -->
     <section id="hero" aria-label="Presentación">
-      <h1></h1>
+      <div class="container hero__container">
+
+        <span class="badge">● Disponible para trabajar</span>
+
+        <p class="hero__eyebrow mono">DESARROLLADOR FULL-STACK · CÁDIZ, ESPAÑA</p>
+
+        <h1 class="hero__title">
+          Construyo productos<br>
+          <span class="hero__line2">que <span class="hero__accent-word">facturan</span>.</span>
+        </h1>
+
+        <p class="hero__body">
+          Soy Eduardo Moreno, desarrollador multiplataforma (DAM).
+          He creado Emite, una plataforma SaaS de facturación para
+          autónomos y pymes españolas: Angular, NestJS y PostgreSQL,
+          con Stripe, Open Banking y cumplimiento Verifactu.
+          En producción y con app Android.
+        </p>
+
+        <div class="hero__ctas">
+          <a href="#proyecto-destacado" class="btn btn--primary">Ver Emite ↓</a>
+          <a href="assets/cv/CV-Eduardo-Moreno.pdf" class="btn btn--ghost" download>Descargar CV</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__value mono" data-count="11">11</span>
+            <span class="stat__label">módulos<br>en producción</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value mono" data-count="249">249</span>
+            <span class="stat__label">tests<br>automatizados</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value mono" data-count="4">4</span>
+            <span class="stat__label">proyectos<br>3 plataformas</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- SECCIÓN: Proyecto destacado — Emite -->
