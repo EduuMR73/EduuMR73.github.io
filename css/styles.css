@@ -430,7 +430,9 @@ a {
 
 .emite-media__thumbs img {
   width: 100%;
-  height: auto;
+  height: 110px;
+  object-fit: cover;
+  object-position: top center;
   display: block;
   border-radius: 6px;
   border: 1px solid var(--border);
@@ -438,7 +440,9 @@ a {
   cursor: pointer;
 }
 
-.emite-media__thumbs img:hover { border-color: var(--accent); }
+.emite-media__thumbs img:hover {
+  border-color: var(--accent);
+}
 
 /* ── Ficha ── */
 .emite-ref {
@@ -449,8 +453,13 @@ a {
   margin-bottom: var(--sp-3);
 }
 
+.emite-star {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: normal;
+}
+
 .emite-title {
-  font-size: var(--fs-h2);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--sp-3);
