@@ -367,7 +367,16 @@ a {
   margin-top: var(--sp-1);
 }
 
-@media (max-width: 479px) {
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: clamp(1.75rem, 9vw, 2.6rem);
+  }
+
+  .hero__eyebrow {
+    font-size: 0.65rem;
+    white-space: normal;
+  }
+
   .hero__stats {
     flex-direction: column;
     gap: var(--sp-5);
