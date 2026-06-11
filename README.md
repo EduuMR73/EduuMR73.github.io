@@ -1,2 +1,5 @@
-# EduuMR73.github.io
-Portfolio personal — Eduardo Moreno Rodríguez
+# Eduardo Moreno — Portfolio
+
+Portfolio personal. HTML/CSS/JS estático puro.
+
+Live: https://eduumr73.github.io

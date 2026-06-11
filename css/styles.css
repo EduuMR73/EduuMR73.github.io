@@ -1,0 +1,165 @@
+/* ============================================================
+   RESET MÍNIMO
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  /* Color — base */
+  --bg-base:        #161616;
+  --bg-surface:     #1E1E1E;
+  --bg-elevated:    #262626;
+  --border:         #2E2E2E;
+  --border-strong:  #3D3D3D;
+
+  /* Color — texto */
+  --text-primary:   #F2F0EB;
+  --text-secondary: #A8A49C;
+  --text-muted:     #6E6A63;
+
+  /* Color — acento */
+  --accent:         #E8C96D;
+  --accent-dark:    #C9A84C;
+  --accent-glow:    rgba(232, 201, 109, 0.12);
+
+  /* Color — semánticos */
+  --positive:       #4ADE80;
+
+  /* Tipografía — escala */
+  --fs-hero:  clamp(2.6rem, 7vw, 4.8rem);
+  --fs-h2:    clamp(1.8rem, 4vw, 2.6rem);
+  --fs-h3:    1.25rem;
+  --fs-body:  1.0625rem;
+  --fs-small: 0.875rem;
+  --fs-label: 0.75rem;
+
+  /* Espaciado */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  /* Layout */
+  --container:  1100px;
+  --px-mobile:  24px;
+  --px-desktop: 48px;
+}
+
+
+/* ============================================================
+   BODY
+   ============================================================ */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* ============================================================
+   CONTENEDOR
+   ============================================================ */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-inline: var(--px-mobile);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--px-desktop);
+  }
+}
+
+
+/* ============================================================
+   TIPOGRAFÍA BASE
+   ============================================================ */
+h1 {
+  font-size: var(--fs-hero);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+p {
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   UTILIDADES
+   ============================================================ */
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* ============================================================
+   ACCESIBILIDAD — FOCUS
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+
+/* ============================================================
+   SKIP LINK
+   ============================================================ */
+.skip-link {
+  position: absolute;
+  top: var(--sp-3);
+  left: var(--sp-3);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--bg-surface);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: var(--fs-small);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  transform: translateY(-200%);
+  transition: transform 180ms ease-out;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
