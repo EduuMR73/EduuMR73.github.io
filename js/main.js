@@ -25,31 +25,40 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 }
 
 // ── Nav activa por scroll ──
-// #proyecto-destacado y #proyectos ambos activan el enlace "Proyectos"
-const navLinks = document.querySelectorAll('.nav__link');
-const sectionToNav = {
-  'proyecto-destacado': '#proyecto-destacado',
-  'proyectos':          '#proyecto-destacado',
-  'trayectoria':        '#trayectoria',
-  'stack':              '#stack',
-  'contacto':           '#contacto',
-};
+(function() {
+  const sectionNavMap = {
+    'hero':                  null,
+    'proyecto-destacado':    'a[href="#proyecto-destacado"]',
+    'proyectos':             'a[href="#proyecto-destacado"]',
+    'trayectoria':           'a[href="#trayectoria"]',
+    'stack':                 'a[href="#stack"]',
+    'contacto':              'a[href="#contacto"]'
+  };
 
-const sectionObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    const navHref = sectionToNav[entry.target.id];
-    if (!navHref) return;
-    navLinks.forEach(link => {
-      link.classList.toggle('nav__link--active', link.getAttribute('href') === navHref);
+  const allNavLinks = document.querySelectorAll('.nav a[href^="#"]');
+
+  function setActive(sectionId) {
+    allNavLinks.forEach(l => l.classList.remove('nav--active'));
+    const selector = sectionNavMap[sectionId];
+    if (selector) {
+      const link = document.querySelector(selector);
+      if (link) link.classList.add('nav--active');
+    }
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setActive(entry.target.id);
+      }
     });
+  }, {
+    rootMargin: '-60px 0px -60% 0px',
+    threshold: 0
   });
-}, { rootMargin: '-64px 0px -40% 0px', threshold: 0 });
 
-Object.keys(sectionToNav).forEach(id => {
-  const el = document.getElementById(id);
-  if (el) sectionObserver.observe(el);
-});
+  document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+})();
 
 // ── Clipboard copy email ──
 document.querySelectorAll('.btn-copy').forEach(btn => {

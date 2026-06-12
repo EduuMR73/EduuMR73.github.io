@@ -229,6 +229,10 @@ a {
   color: var(--text-primary);
 }
 
+.nav--active {
+  color: var(--accent) !important;
+}
+
 @media (max-width: 767px) {
   .nav__link {
     display: none;
@@ -236,11 +240,7 @@ a {
 }
 
 /* ── Scroll margin para nav fija ── */
-#proyecto-destacado,
-#proyectos,
-#trayectoria,
-#stack,
-#contacto {
+section {
   scroll-margin-top: 90px;
 }
 
