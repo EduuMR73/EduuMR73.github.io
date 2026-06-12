@@ -15,7 +15,10 @@
   <meta property="og:image" content="https://eduumr73.github.io/assets/img/og-image.png">
   <meta property="og:url" content="https://eduumr73.github.io/">
   <meta property="og:locale" content="es_ES">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Eduardo Moreno — Construyo productos que facturan">
+  <meta name="twitter:description" content="Full-stack: Angular · NestJS · PostgreSQL · Kotlin. Creador de Emite, SaaS de facturación en producción.">
+  <meta name="twitter:image"       content="https://eduumr73.github.io/assets/img/og-image.png">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -530,5 +533,36 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Eduardo Moreno",
+        "jobTitle": "Full-Stack Developer",
+        "url": "https://eduumr73.github.io",
+        "email": "eduumr@gmail.com",
+        "sameAs": [
+          "https://github.com/EduuMR73",
+          "https://www.linkedin.com/in/eduumr73"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Emite",
+        "description": "Plataforma SaaS de facturación para autónomos y pymes españolas con cumplimiento Verifactu, Stripe y Open Banking.",
+        "url": "https://emite-app.onrender.com/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Android",
+        "author": {
+          "@type": "Person",
+          "name": "Eduardo Moreno"
+        }
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
