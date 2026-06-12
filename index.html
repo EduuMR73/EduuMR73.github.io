@@ -237,14 +237,16 @@
 
           <!-- Tarjeta 1: Hamparo -->
           <article class="proyecto-card">
-            <button class="lightbox-trigger proyecto-cover"
-                    data-src="assets/img/hamparo-cover.webp"
-                    data-alt="Hamparo — App Android nativa con arquitectura MVVM"
-                    aria-label="Ampliar imagen: Hamparo">
-              <img src="assets/img/hamparo-cover.webp"
-                   alt="Hamparo — App Android nativa con arquitectura MVVM"
-                   width="560" height="350" loading="lazy">
-            </button>
+            <div class="card-media">
+              <button class="lightbox-trigger proyecto-cover"
+                      data-src="assets/img/hamparo-cover.webp"
+                      data-alt="Hamparo — App Android nativa con arquitectura MVVM"
+                      aria-label="Ampliar imagen: Hamparo">
+                <img src="assets/img/hamparo-cover.webp"
+                     alt="Hamparo — App Android nativa con arquitectura MVVM"
+                     width="560" height="350" loading="lazy">
+              </button>
+            </div>
             <p class="proyecto-ref mono">REF: PRJ-2026-002 · ANDROID</p>
             <h3 class="proyecto-nombre">Hamparo</h3>
             <p class="proyecto-desc">
@@ -272,6 +274,13 @@
 
           <!-- Tarjeta 2: Super Basket League -->
           <article class="proyecto-card" id="sbl-card">
+            <div class="card-media">
+              <video preload="none"
+                     poster="assets/img/sbl-poster.webp"
+                     controls muted playsinline>
+                <source src="assets/video/sbl-demo.mp4" type="video/mp4">
+              </video>
+            </div>
             <p class="proyecto-ref mono">REF: PRJ-2026-003 · JUEGO</p>
             <h3 class="proyecto-nombre">Super Basket League</h3>
             <p class="proyecto-desc">
@@ -285,28 +294,23 @@
               <span class="chip mono">Python 3.12</span>
               <span class="chip mono">Pygame</span>
             </div>
-            <div id="sbl-video-wrap" class="card-video" hidden>
-              <video preload="none"
-                     poster="assets/img/sbl-poster.webp"
-                     controls muted playsinline>
-                <source src="assets/video/sbl-demo.mp4" type="video/mp4">
-              </video>
-            </div>
             <div class="proyecto-links">
               <a href="https://github.com/EduuMR73/super-basket-league"
                  class="btn btn--ghost btn--sm"
                  target="_blank"
                  rel="noopener noreferrer">Repositorio</a>
-              <button class="btn btn--ghost btn--sm btn-video-toggle"
-                      data-target="sbl-video-wrap"
-                      data-label-open="▶ Vídeo"
-                      data-label-close="✕ Cerrar vídeo"
-                      type="button">▶ Vídeo</button>
             </div>
           </article>
 
           <!-- Tarjeta 3: Pokédex Interactiva -->
           <article class="proyecto-card" id="pokedex-card">
+            <div class="card-media card-media--vertical">
+              <video preload="none"
+                     poster="assets/img/pokedex-poster.webp"
+                     controls muted playsinline>
+                <source src="assets/video/pokedex-demo.mp4" type="video/mp4">
+              </video>
+            </div>
             <p class="proyecto-ref mono">REF: PRJ-2025-001 · ANDROID</p>
             <h3 class="proyecto-nombre">Pokédex Interactiva</h3>
             <p class="proyecto-desc">
@@ -322,23 +326,11 @@
               <span class="chip mono">StateFlow</span>
               <span class="chip mono">Coil</span>
             </div>
-            <div id="pokedex-video-wrap" class="card-video card-video--vertical" hidden>
-              <video preload="none"
-                     poster="assets/img/pokedex-poster.webp"
-                     controls muted playsinline>
-                <source src="assets/video/pokedex-demo.mp4" type="video/mp4">
-              </video>
-            </div>
             <div class="proyecto-links">
               <a href="https://github.com/EduuMR73/pokedex-interactiva"
                  class="btn btn--ghost btn--sm"
                  target="_blank"
                  rel="noopener noreferrer">Repositorio</a>
-              <button class="btn btn--ghost btn--sm btn-video-toggle"
-                      data-target="pokedex-video-wrap"
-                      data-label-open="▶ Vídeo"
-                      data-label-close="✕ Cerrar vídeo"
-                      type="button">▶ Vídeo</button>
             </div>
           </article>
 

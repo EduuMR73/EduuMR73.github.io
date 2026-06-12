@@ -136,23 +136,6 @@ if (nav) {
     });
   }
 
-  document.querySelectorAll('.btn-video-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const wrap  = document.getElementById(btn.dataset.target);
-      if (!wrap) return;
-      const video = wrap.querySelector('video');
-      const isHidden = wrap.hidden;
-      wrap.hidden = !isHidden;
-      btn.textContent = isHidden ? btn.dataset.labelClose : btn.dataset.labelOpen;
-      if (isHidden) {
-        video?.play();
-      } else {
-        video?.pause();
-        if (video) video.currentTime = 0;
-      }
-    });
-  });
-
   if ('IntersectionObserver' in window) {
     const vo = new IntersectionObserver(
       entries => entries.forEach(e => { if (!e.isIntersecting) e.target.pause(); }),
