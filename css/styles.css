@@ -989,3 +989,96 @@ section {
 .footer__legal a:hover {
   color: var(--text-primary);
 }
+
+
+/* ════════════════════════════════════════════
+   F6 — MOTION
+   Todo dentro de prefers-reduced-motion: no-preference
+   ════════════════════════════════════════════ */
+
+@keyframes fadeRise8 {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeRise16 {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes drawUnderline {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* ── Hero: líneas y spans como bloques ── */
+  .hero__line1,
+  .hero__line2 {
+    display: block;
+  }
+
+  /* ── Secuencia de entrada del hero ── */
+
+  /* t=0ms: badge */
+  .badge {
+    animation: fadeRise8 300ms ease-out 0ms both;
+  }
+
+  /* t=100ms: eyebrow */
+  .hero__eyebrow {
+    animation: fadeRise8 300ms ease-out 100ms both;
+  }
+
+  /* t=200ms: línea 1 del H1 */
+  .hero__line1 {
+    animation: fadeRise16 400ms ease-out 200ms both;
+  }
+
+  /* t=350ms: línea 2 del H1 */
+  .hero__line2 {
+    animation: fadeRise16 400ms ease-out 350ms both;
+  }
+
+  /* t=600ms: subrayado champán (dibujado de izquierda a derecha) */
+  .hero__accent-word::after {
+    transform-origin: left;
+    animation: drawUnderline 350ms ease-out 600ms both;
+  }
+
+  /* t=700ms: párrafo y CTAs */
+  .hero__body {
+    animation: fadeRise16 400ms ease-out 700ms both;
+  }
+  .hero__ctas {
+    animation: fadeRise16 400ms ease-out 700ms both;
+  }
+
+  /* t=850ms: stats */
+  .hero__stats {
+    animation: fadeRise16 400ms ease-out 850ms both;
+  }
+
+  /* ── Scroll reveals (resto de secciones) ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 450ms ease-out, transform 450ms ease-out;
+  }
+
+  .reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* Fuera del media query: .hero__line1 y .hero__line2 son siempre
+   visibles en reduced-motion / sin JS */
+@media (prefers-reduced-motion: reduce) {
+  .hero__line1,
+  .hero__line2 {
+    display: block;
+  }
+}

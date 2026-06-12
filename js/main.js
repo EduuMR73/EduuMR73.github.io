@@ -6,23 +6,27 @@ if (nav) {
   }, { passive: true });
 }
 
-// ── Count-up ──
-function runCountUp(el) {
-  const target = parseInt(el.dataset.count, 10);
-  const duration = 600;
-  const start = performance.now();
-  function tick(now) {
-    const p = Math.min((now - start) / duration, 1);
-    el.textContent = Math.floor(p * target);
-    if (p < 1) requestAnimationFrame(tick);
-    else el.textContent = target;
+// ── Count-up sincronizado con animación hero (t=850ms) ──
+(function() {
+  function runCountUp(el) {
+    const target = parseInt(el.dataset.count, 10);
+    const duration = 600;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      el.textContent = Math.floor(p * target);
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(tick);
   }
-  requestAnimationFrame(tick);
-}
 
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.querySelectorAll('[data-count]').forEach(runCountUp);
-}
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setTimeout(() => {
+      document.querySelectorAll('[data-count]').forEach(runCountUp);
+    }, 850);
+  }
+})()
 
 // ── Nav activa por scroll ──
 (function() {
@@ -58,6 +62,32 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   });
 
   document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+})();
+
+// ── Scroll reveals con IntersectionObserver ──
+(function() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(el => {
+      el.classList.add('reveal--visible');
+    });
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal--visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    revealObserver.observe(el);
+  });
 })();
 
 // ── Clipboard copy email ──
