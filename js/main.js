@@ -125,7 +125,32 @@ if (nav) {
   }
 })();
 
-// ── Vídeos: Emite scroll+play, toggles tarjetas, pause on exit ──
+// ── Fachada de vídeo: SBL y Pokédex ──
+;(function () {
+  document.querySelectorAll('.card-facade').forEach(facade => {
+    const wrap  = facade.closest('.card-media');
+    const video = wrap.querySelector('video');
+    if (!video) return;
+
+    function showVideo() {
+      facade.hidden = true;
+      video.hidden = false;
+      video.play();
+    }
+
+    function showFacade() {
+      video.pause();
+      video.currentTime = 0;
+      video.hidden = true;
+      facade.hidden = false;
+    }
+
+    facade.addEventListener('click', showVideo);
+    video.addEventListener('ended', showFacade);
+  });
+})();
+
+// ── Vídeos: Emite scroll+play, pause on exit ──
 ;(function () {
   const btnEmite = document.getElementById('btn-emite-video');
   const emiteVid = document.getElementById('emite-video');

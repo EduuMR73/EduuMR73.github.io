@@ -275,9 +275,14 @@
           <!-- Tarjeta 2: Super Basket League -->
           <article class="proyecto-card" id="sbl-card">
             <div class="card-media">
-              <video preload="metadata"
-                     poster="assets/img/sbl-poster.webp"
-                     controls muted playsinline>
+              <div class="card-facade">
+                <img src="assets/img/sbl-poster-vertical.webp"
+                     alt="Super Basket League — demo del juego"
+                     width="560" height="400" loading="lazy">
+                <button class="card-facade__play" type="button"
+                        aria-label="Reproducir demo de Super Basket League">▶</button>
+              </div>
+              <video preload="none" controls muted playsinline hidden>
                 <source src="assets/video/sbl-demo.mp4" type="video/mp4">
               </video>
             </div>
@@ -305,9 +310,14 @@
           <!-- Tarjeta 3: Pokédex Interactiva -->
           <article class="proyecto-card" id="pokedex-card">
             <div class="card-media card-media--vertical">
-              <video preload="metadata"
-                     poster="assets/img/pokedex-poster.webp"
-                     controls muted playsinline>
+              <div class="card-facade">
+                <img src="assets/img/pokedex-poster.webp"
+                     alt="Pokédex Interactiva — demo de la aplicación"
+                     width="560" height="400" loading="lazy">
+                <button class="card-facade__play" type="button"
+                        aria-label="Reproducir demo de Pokédex Interactiva">▶</button>
+              </div>
+              <video preload="none" controls muted playsinline hidden>
                 <source src="assets/video/pokedex-demo.mp4" type="video/mp4">
               </video>
             </div>
