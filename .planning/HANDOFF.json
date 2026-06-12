@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "timestamp": "2026-06-12T02:23:52.934Z",
+  "timestamp": "2026-06-12T03:00:16.648Z",
   "phase_name": "Portfolio EduuMR73 — fases F0–F8",
   "status": "paused",
   "completed_tasks": [
@@ -11,21 +11,24 @@
     {"id": 4, "name": "F4 — Trayectoria + Stack", "status": "done", "commit": "c787576"},
     {"id": 5, "name": "F5 — Contacto + Footer", "status": "done", "commit": "4967970"},
     {"id": 51, "name": "fix — Nav activa + btn-copy", "status": "done", "commit": "2093761"},
-    {"id": 6, "name": "F6 — Motion + pulido", "status": "done", "commit": "pendiente"},
-    {"id": 61, "name": "fix — TypeError IIFEs semicolons", "status": "done", "commit": "pendiente"},
-    {"id": 62, "name": "fix — Espaciado mobil @media 768px", "status": "done", "commit": "pendiente"},
-    {"id": 7, "name": "F7 — SEO + OG + JSON-LD", "status": "done", "commit": "pendiente"},
-    {"id": 71, "name": "copy — hero__body, contacto-desc, footer", "status": "done", "commit": "pendiente"}
+    {"id": 6, "name": "F6 — Motion + pulido", "status": "done"},
+    {"id": 61, "name": "fix — TypeError IIFEs semicolons", "status": "done"},
+    {"id": 62, "name": "fix — Espaciado mobil @media 768px", "status": "done"},
+    {"id": 7, "name": "F7 — SEO + OG + JSON-LD", "status": "done"},
+    {"id": 71, "name": "copy — hero__body, contacto-desc, footer", "status": "done"},
+    {"id": 9, "name": "feat — Lightbox nativo <dialog> para imagenes Emite", "status": "done", "commit": "0613ef5"},
+    {"id": 91, "name": "fix — Lightbox data-full thumbnails + fallback src + max-height 85dvh", "status": "done", "commit": "fe6b66d"}
   ],
   "remaining_tasks": [
     {"id": 8, "name": "F8 — QA final (Lighthouse >=95, checklist §11)", "status": "not_started"}
   ],
   "human_actions_pending": [
-    {"action": "Commitear index.html + css/styles.css + js/main.js", "context": "F6+F7+fixes sin commitear", "blocking": true},
-    {"action": "git push origin main + verificar og-image en opengraph.xyz", "blocking": false},
-    {"action": "Añadir CV PDF en assets/cv/CV-Eduardo-Moreno.pdf", "blocking": false}
+    {"action": "Añadir assets/img/emite-1-full.webp, emite-2-full.webp, emite-3-full.webp", "context": "Los data-full apuntan a estas rutas — sin ellos el lightbox hace fallback a los thumbnails", "blocking": false},
+    {"action": "git push origin main", "blocking": false},
+    {"action": "Añadir CV PDF en assets/cv/CV-Eduardo-Moreno.pdf", "blocking": false},
+    {"action": "Descomentar bloque hamparo-cover cuando llegue hamparo-cover.webp", "context": "Bloque comentado listo en la tarjeta Hamparo", "blocking": false}
   ],
-  "uncommitted_files": ["index.html", "css/styles.css", "js/main.js"],
-  "next_action": "1. Commitear los tres archivos. 2. Ejecutar F8: checklist §11 + Lighthouse movil.",
-  "context_notes": "HTML/CSS/JS plano sin frameworks. Unico !important en .nav a.nav--active:not(.btn--primary). ;(function(){ en todos los IIFEs. F8 requiere verificacion manual en browser + opengraph.xyz."
+  "uncommitted_files": [],
+  "next_action": "Ejecutar F8: checklist §11 del PLAN_PORTFOLIO.md + Lighthouse movil.",
+  "context_notes": "HTML/CSS/JS plano sin frameworks. Lightbox: <dialog> nativo, sin librerias. Thumbnails usan data-full para version completa, fallback a data-src. Unico !important en .nav a.nav--active:not(.btn--primary). ;(function(){ en todos los IIFEs."
 }
