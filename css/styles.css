@@ -992,6 +992,35 @@ section {
 
 
 /* ════════════════════════════════════════════
+   MÓVIL — espaciado vertical
+   ════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  .emite-grid,
+  .proyectos-total,
+  .trayectoria-grid,
+  .stack-grid {
+    padding-bottom: var(--sp-7);
+  }
+
+  .contacto-inner {
+    padding-bottom: var(--sp-8);
+  }
+
+  .section-label {
+    padding-top: var(--sp-5);
+    margin-bottom: var(--sp-5);
+  }
+
+  .stack-grid {
+    margin-bottom: 0;
+  }
+
+}
+
+
+/* ════════════════════════════════════════════
    F6 — MOTION
    Todo dentro de prefers-reduced-motion: no-preference
    ════════════════════════════════════════════ */
