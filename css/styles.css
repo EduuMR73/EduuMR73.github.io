@@ -229,8 +229,15 @@ a {
   color: var(--text-primary);
 }
 
-.nav--active {
-  color: var(--accent) !important;
+/* Estado activo: enlaces de texto de la nav */
+.nav a.nav--active:not(.btn--primary) {
+  color: var(--accent);
+}
+
+/* Estado activo: botón CTA Contacto */
+.nav .btn--primary.nav--active {
+  background: var(--accent-dark);
+  color: #1a1000;
 }
 
 @media (max-width: 767px) {
@@ -908,14 +915,15 @@ section {
   border: 1px solid var(--border);
   border-radius: 6px;
   color: var(--text-muted);
-  padding: 6px 10px;
+  padding: 6px 9px;
   cursor: pointer;
-  font-size: var(--fs-small);
-  display: flex;
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-flex;
   align-items: center;
-  gap: var(--sp-2);
-  transition: border-color 180ms ease-out,
-              color 180ms ease-out;
+  justify-content: center;
+  transition: border-color 180ms ease-out, color 180ms ease-out;
+  flex-shrink: 0;
 }
 
 .btn-copy:hover {
@@ -928,10 +936,7 @@ section {
   color: var(--positive);
 }
 
-.btn-copy__feedback {
-  font-size: 0.7rem;
-  min-width: 56px;
-}
+.btn-copy__feedback { display: none; }
 
 .contacto-links {
   display: flex;

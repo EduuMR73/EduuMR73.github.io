@@ -62,16 +62,19 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 // ── Clipboard copy email ──
 document.querySelectorAll('.btn-copy').forEach(btn => {
+  const icon = btn.querySelector('.btn-copy__icon');
+  let timer;
   btn.addEventListener('click', async () => {
-    const text = btn.dataset.copy;
     try {
-      await navigator.clipboard.writeText(text);
-      const feedback = btn.querySelector('.btn-copy__feedback');
-      feedback.textContent = 'Copiado ✓';
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      icon.textContent = '✓';
       btn.classList.add('btn-copy--done');
-      setTimeout(() => {
-        feedback.textContent = '';
+      btn.setAttribute('aria-label', 'Email copiado');
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        icon.textContent = '⧉';
         btn.classList.remove('btn-copy--done');
+        btn.setAttribute('aria-label', 'Copiar email al portapapeles');
       }, 2000);
     } catch {
       // fallback silencioso
