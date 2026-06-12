@@ -113,21 +113,41 @@
           <!-- Columna izquierda: media (60%) -->
           <div class="emite-media">
             <figure class="emite-media__main">
-              <img src="assets/img/emite-cover.webp"
-                   alt="Emite — pantalla de inicio de la plataforma SaaS de facturación"
-                   width="1200" height="750"
-                   loading="eager">
+              <button class="lightbox-trigger"
+                      data-src="assets/img/emite-cover.webp"
+                      data-alt="Emite — pantalla de inicio de la plataforma SaaS de facturación"
+                      aria-label="Ampliar imagen: Emite — pantalla de inicio">
+                <img src="assets/img/emite-cover.webp"
+                     alt="Emite — pantalla de inicio de la plataforma SaaS de facturación"
+                     width="1200" height="750"
+                     loading="eager">
+              </button>
             </figure>
             <div class="emite-media__thumbs">
-              <img src="assets/img/emite-1.webp"
-                   alt="Emite — dashboard con evolución de facturación"
-                   width="400" height="250" loading="lazy">
-              <img src="assets/img/emite-2.webp"
-                   alt="Emite — módulo de facturas con listado y estados"
-                   width="400" height="250" loading="lazy">
-              <img src="assets/img/emite-3.webp"
-                   alt="Emite — vista móvil del dashboard en Android"
-                   width="400" height="250" loading="lazy">
+              <button class="lightbox-trigger"
+                      data-src="assets/img/emite-1.webp"
+                      data-alt="Emite — dashboard con evolución de facturación"
+                      aria-label="Ampliar imagen: Emite — dashboard de facturación">
+                <img src="assets/img/emite-1.webp"
+                     alt="Emite — dashboard con evolución de facturación"
+                     width="400" height="250" loading="lazy">
+              </button>
+              <button class="lightbox-trigger"
+                      data-src="assets/img/emite-2.webp"
+                      data-alt="Emite — módulo de facturas con listado y estados"
+                      aria-label="Ampliar imagen: Emite — módulo de facturas">
+                <img src="assets/img/emite-2.webp"
+                     alt="Emite — módulo de facturas con listado y estados"
+                     width="400" height="250" loading="lazy">
+              </button>
+              <button class="lightbox-trigger"
+                      data-src="assets/img/emite-3.webp"
+                      data-alt="Emite — vista móvil del dashboard en Android"
+                      aria-label="Ampliar imagen: Emite — vista móvil Android">
+                <img src="assets/img/emite-3.webp"
+                     alt="Emite — vista móvil del dashboard en Android"
+                     width="400" height="250" loading="lazy">
+              </button>
             </div>
           </div>
 
@@ -216,6 +236,16 @@
 
           <!-- Tarjeta 1: Hamparo -->
           <article class="proyecto-card">
+            <!-- hamparo-cover: descomentar cuando assets/img/hamparo-cover.webp esté disponible
+            <button class="lightbox-trigger proyecto-cover"
+                    data-src="assets/img/hamparo-cover.webp"
+                    data-alt="Hamparo — App Android nativa con arquitectura MVVM"
+                    aria-label="Ampliar imagen: Hamparo">
+              <img src="assets/img/hamparo-cover.webp"
+                   alt="Hamparo — App Android nativa con arquitectura MVVM"
+                   width="560" height="350" loading="lazy">
+            </button>
+            -->
             <p class="proyecto-ref mono">REF: PRJ-2026-002 · ANDROID</p>
             <h3 class="proyecto-nombre">Hamparo</h3>
             <p class="proyecto-desc">
@@ -509,6 +539,11 @@
 
       </div>
     </section>
+
+    <dialog id="lightbox" aria-modal="true" aria-label="Imagen ampliada">
+      <button class="lightbox-close" aria-label="Cerrar imagen">✕</button>
+      <img id="lightbox-img" src="" alt="" draggable="false">
+    </dialog>
 
   </main>
 

@@ -90,6 +90,41 @@ if (nav) {
   });
 })();
 
+// ── Lightbox ──
+;(function () {
+  const dialog   = document.getElementById('lightbox');
+  const dlgImg   = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox-close');
+  if (!dialog || !dlgImg) return;
+
+  let lastTrigger = null;
+
+  document.querySelectorAll('.lightbox-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      lastTrigger = btn;
+      dlgImg.src = btn.dataset.src;
+      dlgImg.alt = btn.dataset.alt || '';
+      dialog.showModal();
+    });
+  });
+
+  closeBtn?.addEventListener('click', closeLightbox);
+
+  dialog.addEventListener('click', e => {
+    if (e.target === dialog) closeLightbox();
+  });
+
+  dialog.addEventListener('close', () => {
+    lastTrigger?.focus();
+    lastTrigger = null;
+    dlgImg.src = '';
+  });
+
+  function closeLightbox() {
+    dialog.close();
+  }
+})();
+
 // ── Clipboard copy email ──
 document.querySelectorAll('.btn-copy').forEach(btn => {
   const icon = btn.querySelector('.btn-copy__icon');
