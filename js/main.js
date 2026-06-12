@@ -7,7 +7,7 @@ if (nav) {
 }
 
 // ── Count-up sincronizado con animación hero (t=850ms) ──
-(function() {
+;(function() {
   function runCountUp(el) {
     const target = parseInt(el.dataset.count, 10);
     const duration = 600;
@@ -29,7 +29,7 @@ if (nav) {
 })()
 
 // ── Nav activa por scroll ──
-(function() {
+;(function() {
   const sectionNavMap = {
     'hero':                  null,
     'proyecto-destacado':    'a[href="#proyecto-destacado"]',
@@ -65,7 +65,7 @@ if (nav) {
 })();
 
 // ── Scroll reveals con IntersectionObserver ──
-(function() {
+;(function() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('.reveal').forEach(el => {
       el.classList.add('reveal--visible');
