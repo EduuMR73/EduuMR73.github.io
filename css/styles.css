@@ -968,7 +968,7 @@ section {
 
 .footer__copy {
   font-size: var(--fs-small);
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 .footer__em {
@@ -978,20 +978,20 @@ section {
 
 .footer__legal {
   font-size: var(--fs-small);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
   gap: var(--sp-4);
 }
 
 .footer__legal a {
-  color: var(--text-muted);
+  color: var(--text-primary);
   text-decoration: none;
   transition: color 180ms ease-out;
 }
 
 .footer__legal a:hover {
-  color: var(--text-primary);
+  color: var(--accent);
 }
 
 
