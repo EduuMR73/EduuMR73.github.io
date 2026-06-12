@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 // ── Nav scroll ──
 const nav = document.querySelector('.nav');
 if (nav) {

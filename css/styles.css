@@ -1094,13 +1094,13 @@ section {
   }
 
   /* ── Scroll reveals (resto de secciones) ── */
-  .reveal {
+  .js .reveal {
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 450ms ease-out, transform 450ms ease-out;
   }
 
-  .reveal--visible {
+  .js .reveal--visible {
     opacity: 1;
     transform: translateY(0);
   }
