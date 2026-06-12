@@ -851,3 +851,126 @@ a {
   flex-wrap: wrap;
   gap: var(--sp-2);
 }
+
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+
+.contacto-inner {
+  max-width: 640px;
+  padding-bottom: var(--sp-10);
+}
+
+.contacto-titulo {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin-bottom: var(--sp-4);
+}
+
+.contacto-desc {
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-7);
+  max-width: 480px;
+}
+
+.contacto-email-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+
+.contacto-email {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 180ms ease-out;
+}
+
+.contacto-email:hover {
+  color: var(--accent-dark);
+}
+
+.btn-copy {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: var(--fs-small);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  transition: border-color 180ms ease-out,
+              color 180ms ease-out;
+}
+
+.btn-copy:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-copy--done {
+  border-color: var(--positive);
+  color: var(--positive);
+}
+
+.btn-copy__feedback {
+  font-size: 0.7rem;
+  min-width: 56px;
+}
+
+.contacto-links {
+  display: flex;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: var(--sp-7) 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+}
+
+.footer__copy {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+.footer__em {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.footer__legal {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.footer__legal a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 180ms ease-out;
+}
+
+.footer__legal a:hover {
+  color: var(--text-primary);
+}
