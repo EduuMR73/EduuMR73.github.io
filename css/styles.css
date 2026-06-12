@@ -590,6 +590,10 @@ section {
   margin-bottom: var(--sp-4);
 }
 
+#btn-emite-video {
+  gap: 6px;
+}
+
 .emite-private {
   font-size: 0.7rem;
   color: var(--text-muted);
