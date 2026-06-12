@@ -1193,3 +1193,37 @@ section {
     to   { opacity: 1; }
   }
 }
+
+/* ── Vídeo en tarjetas de proyectos ── */
+.card-video {
+  margin-bottom: var(--sp-4);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.card-video--vertical {
+  display: flex;
+  justify-content: center;
+}
+
+.card-video--vertical video {
+  width: auto;
+  max-height: 380px;
+  max-width: 100%;
+}
+
+/* Vídeo Emite (columna media) */
+.emite-media__main video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}

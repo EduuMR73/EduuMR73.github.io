@@ -113,15 +113,13 @@
           <!-- Columna izquierda: media (60%) -->
           <div class="emite-media">
             <figure class="emite-media__main">
-              <button class="lightbox-trigger"
-                      data-src="assets/img/emite-cover.webp"
-                      data-alt="Emite — pantalla de inicio de la plataforma SaaS de facturación"
-                      aria-label="Ampliar imagen: Emite — pantalla de inicio">
-                <img src="assets/img/emite-cover.webp"
-                     alt="Emite — pantalla de inicio de la plataforma SaaS de facturación"
-                     width="1200" height="750"
-                     loading="eager">
-              </button>
+              <video id="emite-video"
+                     preload="none"
+                     poster="assets/img/emite-poster.webp"
+                     controls muted playsinline
+                     width="1200" height="750">
+                <source src="assets/video/emite-demo.mp4" type="video/mp4">
+              </video>
             </figure>
             <div class="emite-media__thumbs">
               <button class="lightbox-trigger"
@@ -217,7 +215,7 @@
                  class="btn btn--primary"
                  target="_blank"
                  rel="noopener noreferrer">● Ver demo en vivo</a>
-              <!-- Botón vídeo: se añade cuando llegue emite-demo.mp4 -->
+              <button class="btn btn--ghost" id="btn-emite-video" type="button">▶ Vídeo (90 s)</button>
             </div>
 
             <p class="emite-private mono">
@@ -239,7 +237,6 @@
 
           <!-- Tarjeta 1: Hamparo -->
           <article class="proyecto-card">
-            <!-- hamparo-cover: descomentar cuando assets/img/hamparo-cover.webp esté disponible
             <button class="lightbox-trigger proyecto-cover"
                     data-src="assets/img/hamparo-cover.webp"
                     data-alt="Hamparo — App Android nativa con arquitectura MVVM"
@@ -248,12 +245,12 @@
                    alt="Hamparo — App Android nativa con arquitectura MVVM"
                    width="560" height="350" loading="lazy">
             </button>
-            -->
             <p class="proyecto-ref mono">REF: PRJ-2026-002 · ANDROID</p>
             <h3 class="proyecto-nombre">Hamparo</h3>
             <p class="proyecto-desc">
-              App Android nativa construida con arquitectura limpia
-              de referencia: MVVM con inyección de dependencias.
+              App Android de gestión de cuidados para pacientes y cuidadores:
+              medicación con control de stock, alertas SOS, constantes vitales
+              y un modo paciente accesible por voz.
             </p>
             <p class="proyecto-datos mono">
               Kotlin · Jetpack Compose · Hilt · Retrofit · Room
@@ -274,7 +271,7 @@
           </article>
 
           <!-- Tarjeta 2: Super Basket League -->
-          <article class="proyecto-card">
+          <article class="proyecto-card" id="sbl-card">
             <p class="proyecto-ref mono">REF: PRJ-2026-003 · JUEGO</p>
             <h3 class="proyecto-nombre">Super Basket League</h3>
             <p class="proyecto-desc">
@@ -288,17 +285,28 @@
               <span class="chip mono">Python 3.12</span>
               <span class="chip mono">Pygame</span>
             </div>
+            <div id="sbl-video-wrap" class="card-video" hidden>
+              <video preload="none"
+                     poster="assets/img/sbl-poster.webp"
+                     controls muted playsinline>
+                <source src="assets/video/sbl-demo.mp4" type="video/mp4">
+              </video>
+            </div>
             <div class="proyecto-links">
               <a href="https://github.com/EduuMR73/super-basket-league"
                  class="btn btn--ghost btn--sm"
                  target="_blank"
                  rel="noopener noreferrer">Repositorio</a>
-              <!-- Botón vídeo: añadir cuando exista sbl-demo.mp4 -->
+              <button class="btn btn--ghost btn--sm btn-video-toggle"
+                      data-target="sbl-video-wrap"
+                      data-label-open="▶ Vídeo"
+                      data-label-close="✕ Cerrar vídeo"
+                      type="button">▶ Vídeo</button>
             </div>
           </article>
 
           <!-- Tarjeta 3: Pokédex Interactiva -->
-          <article class="proyecto-card">
+          <article class="proyecto-card" id="pokedex-card">
             <p class="proyecto-ref mono">REF: PRJ-2025-001 · ANDROID</p>
             <h3 class="proyecto-nombre">Pokédex Interactiva</h3>
             <p class="proyecto-desc">
@@ -314,12 +322,23 @@
               <span class="chip mono">StateFlow</span>
               <span class="chip mono">Coil</span>
             </div>
+            <div id="pokedex-video-wrap" class="card-video card-video--vertical" hidden>
+              <video preload="none"
+                     poster="assets/img/pokedex-poster.webp"
+                     controls muted playsinline>
+                <source src="assets/video/pokedex-demo.mp4" type="video/mp4">
+              </video>
+            </div>
             <div class="proyecto-links">
               <a href="https://github.com/EduuMR73/pokedex-interactiva"
                  class="btn btn--ghost btn--sm"
                  target="_blank"
                  rel="noopener noreferrer">Repositorio</a>
-              <!-- Botón vídeo: añadir cuando exista pokedex-demo.mp4 -->
+              <button class="btn btn--ghost btn--sm btn-video-toggle"
+                      data-target="pokedex-video-wrap"
+                      data-label-open="▶ Vídeo"
+                      data-label-close="✕ Cerrar vídeo"
+                      type="button">▶ Vídeo</button>
             </div>
           </article>
 
