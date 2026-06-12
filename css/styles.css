@@ -1139,10 +1139,13 @@ section {
   height: 100dvh;
   max-width: 100vw;
   max-height: 100dvh;
+  overflow: hidden;
+}
+
+#lightbox[open] {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 #lightbox::backdrop {
