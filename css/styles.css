@@ -224,7 +224,8 @@ a {
   transition: color 180ms ease-out;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link--active {
   color: var(--text-primary);
 }
 
@@ -232,6 +233,15 @@ a {
   .nav__link {
     display: none;
   }
+}
+
+/* ── Scroll margin para nav fija ── */
+#proyecto-destacado,
+#proyectos,
+#trayectoria,
+#stack,
+#contacto {
+  scroll-margin-top: 90px;
 }
 
 
