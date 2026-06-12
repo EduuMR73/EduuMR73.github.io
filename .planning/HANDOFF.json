@@ -1,42 +1,31 @@
 {
   "version": "1.0",
-  "timestamp": "2026-06-12T01:19:43.021Z",
-  "phase": null,
+  "timestamp": "2026-06-12T02:23:52.934Z",
   "phase_name": "Portfolio EduuMR73 — fases F0–F8",
-  "phase_dir": null,
-  "plan": null,
-  "task": null,
-  "total_tasks": 8,
   "status": "paused",
   "completed_tasks": [
-    {"id": 0, "name": "F0 — Repo y esqueleto (tokens, HTML landmark, favicon)", "status": "done", "commit": "741ab8f"},
-    {"id": 1, "name": "F1 — Nav + Hero (badge, H1, stats count-up, responsive)", "status": "done", "commit": "62f07e9"},
-    {"id": 2, "name": "F2 — Caso de estudio Emite (grid 60/40, ficha, chips, CTA)", "status": "done", "commit": "458d3d3"},
-    {"id": 3, "name": "F3 — Grid proyectos + línea TOTAL factura", "status": "done", "commit": "1f61721"},
+    {"id": 0, "name": "F0 — Repo y esqueleto", "status": "done", "commit": "741ab8f"},
+    {"id": 1, "name": "F1 — Nav + Hero", "status": "done", "commit": "62f07e9"},
+    {"id": 2, "name": "F2 — Caso de estudio Emite", "status": "done", "commit": "458d3d3"},
+    {"id": 3, "name": "F3 — Grid proyectos", "status": "done", "commit": "1f61721"},
     {"id": 4, "name": "F4 — Trayectoria + Stack", "status": "done", "commit": "c787576"},
-    {"id": 5, "name": "F5 — Contacto + Footer (email, clipboard, CV, RRSS)", "status": "done", "commit": "4967970"},
-    {"id": 51, "name": "fix — Nav activa por scroll + scroll-margin-top + btn-copy compacto", "status": "done", "commit": "2093761"}
+    {"id": 5, "name": "F5 — Contacto + Footer", "status": "done", "commit": "4967970"},
+    {"id": 51, "name": "fix — Nav activa + btn-copy", "status": "done", "commit": "2093761"},
+    {"id": 6, "name": "F6 — Motion + pulido", "status": "done", "commit": "pendiente"},
+    {"id": 61, "name": "fix — TypeError IIFEs semicolons", "status": "done", "commit": "pendiente"},
+    {"id": 62, "name": "fix — Espaciado mobil @media 768px", "status": "done", "commit": "pendiente"},
+    {"id": 7, "name": "F7 — SEO + OG + JSON-LD", "status": "done", "commit": "pendiente"},
+    {"id": 71, "name": "copy — hero__body, contacto-desc, footer", "status": "done", "commit": "pendiente"}
   ],
   "remaining_tasks": [
-    {"id": 6, "name": "F6 — Motion + pulido (reveals IO, animación hero, prefers-reduced-motion)", "status": "not_started"},
-    {"id": 7, "name": "F7 — SEO + OG + JSON-LD (og-image.png, robots.txt, sitemap.xml)", "status": "not_started"},
-    {"id": 8, "name": "F8 — QA final (Lighthouse ≥95, checklist §11 completa)", "status": "not_started"}
+    {"id": 8, "name": "F8 — QA final (Lighthouse >=95, checklist §11)", "status": "not_started"}
   ],
-  "blockers": [],
   "human_actions_pending": [
-    {"action": "git push origin main", "context": "1 commit local sin pushear (fix nav/contacto)", "blocking": false},
-    {"action": "Añadir CV PDF en assets/cv/CV-Eduardo-Moreno.pdf", "context": "El botón Descargar CV ya existe pero el archivo no está en el repo", "blocking": false},
-    {"action": "Generar og-image.png (1200×630)", "context": "Necesaria para F7 — fondo carbón, texto champán, monograma EM", "blocking": false},
-    {"action": "Decidir si se añade vídeo emite-demo.mp4 antes de publicar", "context": "El botón de vídeo está comentado en el HTML — se activa cuando llegue el mp4", "blocking": false}
+    {"action": "Commitear index.html + css/styles.css + js/main.js", "context": "F6+F7+fixes sin commitear", "blocking": true},
+    {"action": "git push origin main + verificar og-image en opengraph.xyz", "blocking": false},
+    {"action": "Añadir CV PDF en assets/cv/CV-Eduardo-Moreno.pdf", "blocking": false}
   ],
-  "decisions": [
-    {"decision": "REFs anuales: PRJ-2025-001 Pokédex, PRJ-2026-001 Emite, PRJ-2026-002 Hamparo, PRJ-2026-003 SBL", "rationale": "Series anuales, no orden de presentación"},
-    {"decision": "nav--active con :not(.btn--primary) para separar estilos de texto vs botón CTA", "rationale": "Evitar texto dorado sobre fondo dorado en el botón Contacto"},
-    {"decision": "btn-copy sin span de feedback — icono ⧉ → ✓ directamente", "rationale": "Eliminar min-width reservado que creaba caja vacía visible"},
-    {"decision": "IES Ciudad de Hércules · Chiclana de la Frontera, Cádiz — Admón y Finanzas 2017–2019", "rationale": "Datos confirmados por el usuario"},
-    {"decision": "Docker incluido en grupo Herramientas del Stack", "rationale": "Confirmado por el usuario"}
-  ],
-  "uncommitted_files": [],
-  "next_action": "Ejecutar F6: reveals con IntersectionObserver + animación de entrada del hero (spec en §10 del PLAN_PORTFOLIO.md) + prefers-reduced-motion",
-  "context_notes": "Proyecto en HTML/CSS/JS plano (sin frameworks, sin build step). Repo: EduuMR73.github.io. Plan maestro en PLAN_PORTFOLIO.md (raíz del repo). Identidad visual: fondo carbón #161616, acento champán #E8C96D (Plus Jakarta Sans + JetBrains Mono). El único !important del proyecto está en .nav a.nav--active:not(.btn--primary) — documentado y justificado."
+  "uncommitted_files": ["index.html", "css/styles.css", "js/main.js"],
+  "next_action": "1. Commitear los tres archivos. 2. Ejecutar F8: checklist §11 + Lighthouse movil.",
+  "context_notes": "HTML/CSS/JS plano sin frameworks. Unico !important en .nav a.nav--active:not(.btn--primary). ;(function(){ en todos los IIFEs. F8 requiere verificacion manual en browser + opengraph.xyz."
 }
