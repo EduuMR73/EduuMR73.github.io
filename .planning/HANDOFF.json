@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "timestamp": "2026-06-12T03:00:16.648Z",
+  "timestamp": "2026-06-12T06:29:10.958Z",
   "phase_name": "Portfolio EduuMR73 — fases F0–F8",
   "status": "paused",
   "completed_tasks": [
@@ -17,7 +17,9 @@
     {"id": 7, "name": "F7 — SEO + OG + JSON-LD", "status": "done"},
     {"id": 71, "name": "copy — hero__body, contacto-desc, footer", "status": "done"},
     {"id": 9, "name": "feat — Lightbox nativo <dialog> para imagenes Emite", "status": "done", "commit": "0613ef5"},
-    {"id": 91, "name": "fix — Lightbox data-full thumbnails + fallback src + max-height 85dvh", "status": "done", "commit": "fe6b66d"}
+    {"id": 91, "name": "fix — Lightbox data-full thumbnails + fallback src + max-height 85dvh", "status": "done", "commit": "fe6b66d"},
+    {"id": 10, "name": "docs — README portfolio", "status": "done", "commit": "1bd5c28"},
+    {"id": 11, "name": "seo — Google Search Console verification meta tag", "status": "done", "commit": "c9d5b60"}
   ],
   "remaining_tasks": [
     {"id": 8, "name": "F8 — QA final (Lighthouse >=95, checklist §11)", "status": "not_started"}
@@ -26,9 +28,10 @@
     {"action": "Añadir assets/img/emite-1-full.webp, emite-2-full.webp, emite-3-full.webp", "context": "Los data-full apuntan a estas rutas — sin ellos el lightbox hace fallback a los thumbnails", "blocking": false},
     {"action": "git push origin main", "blocking": false},
     {"action": "Añadir CV PDF en assets/cv/CV-Eduardo-Moreno.pdf", "blocking": false},
-    {"action": "Descomentar bloque hamparo-cover cuando llegue hamparo-cover.webp", "context": "Bloque comentado listo en la tarjeta Hamparo", "blocking": false}
+    {"action": "Descomentar bloque hamparo-cover cuando llegue hamparo-cover.webp", "context": "Bloque comentado listo en la tarjeta Hamparo", "blocking": false},
+    {"action": "Verificar Google Search Console — confirmar que el sitio queda verificado tras el push", "context": "Meta tag 7L1jCAZkfwjaxo14HvKGYJ4yjNxozRBgllYgjeSH5kw añadida en <head>", "blocking": false}
   ],
   "uncommitted_files": [],
   "next_action": "Ejecutar F8: checklist §11 del PLAN_PORTFOLIO.md + Lighthouse movil.",
-  "context_notes": "HTML/CSS/JS plano sin frameworks. Lightbox: <dialog> nativo, sin librerias. Thumbnails usan data-full para version completa, fallback a data-src. Unico !important en .nav a.nav--active:not(.btn--primary). ;(function(){ en todos los IIFEs."
+  "context_notes": "HTML/CSS/JS plano sin frameworks. Lightbox: <dialog> nativo, sin librerias. Thumbnails usan data-full para version completa, fallback a data-src. Unico !important en .nav a.nav--active:not(.btn--primary). ;(function(){ en todos los IIFEs. Meta GSC en linea 5 del <head>."
 }
