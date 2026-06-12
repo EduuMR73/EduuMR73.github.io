@@ -102,7 +102,7 @@ if (nav) {
   document.querySelectorAll('.lightbox-trigger').forEach(btn => {
     btn.addEventListener('click', () => {
       lastTrigger = btn;
-      dlgImg.src = btn.dataset.src;
+      dlgImg.src = btn.dataset.full || btn.dataset.src;
       dlgImg.alt = btn.dataset.alt || '';
       dialog.showModal();
     });
