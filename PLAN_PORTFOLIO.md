@@ -1,4 +1,4 @@
-# PLAN MAESTRO — Portfolio de Eduardo Moreno (EduuMR)
+﻿# PLAN MAESTRO — Portfolio de Eduardo Moreno (EduuMR)
 
 > Documento de planificación completo. Sirve como contexto para Claude Code (Sonnet/Opus).
 > Regla de oro: **no se pica nada que no esté en este documento**. Si surge una idea nueva, se anota en §13 y se decide después.
@@ -215,7 +215,7 @@ Orden razonado: los proyectos van ANTES que la bio. Un recruiter decide con el t
 
 [CTAs]          [ Ver Emite ↓ ]  (champán)    [ Descargar CV ]  (ghost)
 
-[stats]         11 módulos      249 tests       4 proyectos
+[stats]         11 módulos      268 tests       4 proyectos
                 en producción   automatizados   3 plataformas
 ```
 
@@ -248,7 +248,7 @@ impuestos, con facturas rectificativas, recurrentes y proformas.
 · Suscripciones y pagos con Stripe; arquitectura multi-tenant.
 
 [métricas en mono]
-11 módulos · 249 tests unitarios · APK Android · Deploy en Render (UE)
+11 módulos · 268 tests unitarios · APK Android · Deploy en Render (UE)
 
 TECH STACK (chips mono)
 Angular · Ionic · Capacitor · NestJS · PostgreSQL · Prisma · Stripe ·
