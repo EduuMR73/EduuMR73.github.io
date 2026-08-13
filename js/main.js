@@ -34,8 +34,9 @@ if (nav) {
 ;(function() {
   const sectionNavMap = {
     'hero':                  null,
-    'proyecto-destacado':    'a[href="#proyecto-destacado"]',
-    'proyectos':             'a[href="#proyecto-destacado"]',
+    'destacado-emite':       'a[href="#destacado-emite"]',
+    'destacado-tito':        'a[href="#destacado-tito"]',
+    'proyectos':             'a[href="#destacado-emite"]',
     'trayectoria':           'a[href="#trayectoria"]',
     'stack':                 'a[href="#stack"]',
     'contacto':              'a[href="#contacto"]'
@@ -127,10 +128,10 @@ if (nav) {
   }
 })();
 
-// ── Fachada de vídeo: SBL y Pokédex ──
+// ── Fachada de vídeo: SBL, Pokédex y proyectos destacados (ej. Tito) ──
 ;(function () {
   document.querySelectorAll('.card-facade').forEach(facade => {
-    const wrap  = facade.closest('.card-media');
+    const wrap  = facade.parentElement;
     const video = wrap.querySelector('video');
     if (!video) return;
 
@@ -160,6 +161,16 @@ if (nav) {
     btnEmite.addEventListener('click', () => {
       emiteVid.scrollIntoView({ behavior: 'smooth', block: 'center' });
       emiteVid.play();
+    });
+  }
+
+  // Tito usa el patrón de fachada: el CTA scrollea y dispara el click de la fachada
+  const btnTito     = document.getElementById('btn-tito-video');
+  const titoFacade  = document.getElementById('tito-video-facade');
+  if (btnTito && titoFacade) {
+    btnTito.addEventListener('click', () => {
+      titoFacade.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      titoFacade.click();
     });
   }
 

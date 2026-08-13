@@ -1287,6 +1287,16 @@ section {
   outline-offset: 2px;
 }
 
+/* Fachada de vídeo dentro de la columna ancha (ej. Tito): mismo peso visual
+   que el vídeo nativo de Emite (proporción 1200×750, borde redondeado) */
+.destacado-media__main .card-facade {
+  height: auto;
+  aspect-ratio: 1200 / 750;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
 /* Vídeo Emite (columna media) */
 .destacado-media__main video {
   width: 100%;
@@ -1294,4 +1304,10 @@ section {
   display: block;
   border-radius: 8px;
   border: 1px solid var(--border);
+}
+
+/* Respeta [hidden] en vídeos con fachada (ej. Tito): la regla de arriba
+   fuerza display:block y lo pisaba */
+.destacado-media__main video[hidden] {
+  display: none;
 }
