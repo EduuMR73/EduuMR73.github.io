@@ -8,7 +8,8 @@ Portfolio personal de desarrollador full-stack. Una sola página, construida a m
 
 ## ✨ Qué hay dentro
 
-- **Caso de estudio de [Emite](https://emite-app.onrender.com)** — SaaS de facturación en producción: 11 módulos, 268 tests unitarios, cumplimiento Verifactu.
+- **Caso de estudio de [Emite](https://emite.eduumr.dev/)** — SaaS de facturación en producción, TFG (9/10): 17 módulos, 268 tests unitarios, cumplimiento Verifactu.
+- **Caso de estudio de [Tito English](https://titoenglish.eduumr.dev/)** — app de preparación para los exámenes de Cambridge B1/B2, en producción: 60 usuarios registrados, banco de contenido generado con IA.
 - **Grid de proyectos** con demos en vídeo (patrón fachada: imagen + play, el vídeo solo se descarga si lo pides) y lightbox con `<dialog>` nativo.
 - **Identidad propia:** paleta Carbón + Champán, tipografías Plus Jakarta Sans y JetBrains Mono, y una estética de documento fiscal — cada proyecto con su `REF:` como una serie de facturación.
 - **SEO completo:** Open Graph, JSON-LD, sitemap y robots.
@@ -16,9 +17,9 @@ Portfolio personal de desarrollador full-stack. Una sola página, construida a m
 
 ## 📊 Lighthouse (móvil, throttling 4G lento)
 
-| Performance | Accessibility | SEO |
-|:-----------:|:-------------:|:---:|
-| **95** | **100** | **100** |
+| Performance | Accessibility | Best Practices | SEO |
+|:-----------:|:-------------:|:--------------:|:---:|
+| **99** | **100** | **100** | **100** |
 
 ## 🛠️ Stack
 
