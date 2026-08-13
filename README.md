@@ -1,6 +1,6 @@
 ﻿# ✦ Portfolio — Eduardo Moreno
 
-**[→ Ver en vivo: eduumr73.github.io](https://eduumr73.github.io)**
+**[→ Ver en vivo: eduumr.dev](https://eduumr.dev)**
 
 Portfolio personal de desarrollador full-stack. Una sola página, construida a mano con **HTML, CSS y JavaScript vanilla** — sin frameworks, sin librerías, sin dependencias. No necesitaba más.
 
@@ -58,4 +58,4 @@ python -m http.server 8000
 
 **Eduardo Moreno Rodríguez** — Desarrollador Full-Stack · Técnico Superior DAM.
 
-GitHub: [@EduuMR73](https://github.com/EduuMR73) · LinkedIn: [/in/eduumr73](https://www.linkedin.com/in/eduumr73) · Web: [eduumr73.github.io](https://eduumr73.github.io)
+GitHub: [@EduuMR73](https://github.com/EduuMR73) · LinkedIn: [/in/eduumr73](https://www.linkedin.com/in/eduumr73) · Web: [eduumr.dev](https://eduumr.dev)
