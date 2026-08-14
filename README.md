@@ -4,7 +4,7 @@
 
 Portfolio personal de desarrollador full-stack. Una sola página, construida a mano con **HTML, CSS y JavaScript vanilla** — sin frameworks, sin librerías, sin dependencias. No necesitaba más.
 
-> *"Construyo productos que facturan."*
+> *"Construyo productos que funcionan."*
 
 ## ✨ Qué hay dentro
 
